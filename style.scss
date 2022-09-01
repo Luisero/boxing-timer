@@ -1,0 +1,74 @@
+$text-color: #754C4C;
+$background-color:#E2E2E2;
+$background-timer:#D9D9D9;
+$main-color:#FA9B9B;
+//Button colors
+$start-color:#41A04A;
+$pause-color:#98A412;
+$stop-color:#EE4343;
+
+body{
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: $background-color;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+        color: $text-color;
+    }
+}
+
+.container{
+    height: 45vh;
+    width: 45vw;
+ 
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.round-timer{
+    position: relative;
+    height: 270px;
+    width: 270px;
+    background-color: $main-color;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+.round-timer::before{
+    content: "";
+    position: absolute;
+    height: 84%;
+    width: 84%;
+    background-color: white;
+    border-radius: 50%;
+}
+.value-container{
+    color: $text-color;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    #round-text{
+       font-size: 1.2em;
+            
+    }
+    #round-timer-text{
+        font-size: 5em;
+        box-sizing: border-box;
+        margin: 0;
+    }
+}
