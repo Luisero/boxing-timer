@@ -35,6 +35,7 @@ header h1 {
   border-radius: 50%;
   display: grid;
   place-items: center;
+  transition-duration: 0.2s;
 }
 
 .round-timer::before {
@@ -44,6 +45,23 @@ header h1 {
   width: 84%;
   background-color: white;
   border-radius: 50%;
+}
+
+.config {
+  display: block;
+  position: absolute;
+  top: 0%;
+  right: 10%;
+  font-size: 2em;
+}
+.config button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.config button i {
+  font-size: 2.5em;
+  color: #754C4C;
 }
 
 .value-container {
@@ -62,6 +80,47 @@ header h1 {
   font-size: 5em;
   box-sizing: border-box;
   margin: 0;
+}
+
+#intervalo-text {
+  color: #5dec6c;
+  display: none;
+}
+
+#finished {
+  color: #cf4b4b;
+  display: none;
+}
+
+.buttons {
+  position: absolute;
+  top: 100%;
+  text-align: center;
+}
+.buttons button {
+  color: black;
+  background-color: #FA9B9B;
+  border: none;
+  width: 100px;
+  height: 40px;
+  margin-inline: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.buttons #start-button {
+  background-color: #5dec6c;
+}
+.buttons #pause-button {
+  background-color: #e5f34b;
+}
+.buttons #stop-button {
+  background-color: #cf4b4b;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 90vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

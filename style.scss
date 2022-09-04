@@ -3,9 +3,11 @@ $background-color:#E2E2E2;
 $background-timer:#D9D9D9;
 $main-color:#FA9B9B;
 //Button colors
-$start-color:#41A04A;
-$pause-color:#98A412;
-$stop-color:#EE4343;
+$start-color:#5dec6c;
+$pause-color:#e5f34b;
+$stop-color:#cf4b4b;
+
+
 
 body{
     font-family: 'Roboto', Arial, sans-serif;
@@ -26,7 +28,7 @@ header{
 .container{
     height: 45vh;
     width: 45vw;
- 
+    
     position: absolute;
     transform: translate(-50%,-50%);
     top: 50%;
@@ -45,6 +47,8 @@ header{
     border-radius: 50%;
     display: grid;
     place-items: center;
+    transition-duration: .2s;
+           
 }
 .round-timer::before{
     content: "";
@@ -53,6 +57,26 @@ header{
     width: 84%;
     background-color: white;
     border-radius: 50%;
+}
+.config{
+    
+        display: block;
+        position: absolute;
+        top: 0%;
+        right: 10%;
+        font-size: 2em;
+        button{
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            
+
+            i{
+                font-size: 2.5em;
+                color: $text-color;
+            }
+        }
+    
 }
 .value-container{
     color: $text-color;
@@ -71,4 +95,47 @@ header{
         box-sizing: border-box;
         margin: 0;
     }
+}
+#intervalo-text{
+    color: $start-color;
+    display: none;
+}
+#finished{
+    color: #cf4b4b;
+    display: none;
+}
+
+.buttons{
+    position: absolute;
+    top: 100%;
+    text-align: center;
+
+    button{
+        color:black;
+        background-color: $main-color;
+        border: none;
+        width: 100px;
+        height: 40px;
+        margin-inline: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #start-button{
+        background-color: $start-color;
+    }
+    #pause-button{
+        background-color: $pause-color;
+    }
+    #stop-button{
+        background-color: $stop-color;
+    }
+    
+}
+
+
+@media(max-width:1000px){
+    .container{
+        width:90vw;
+    }
+    
 }

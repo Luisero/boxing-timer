@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Boxing Timer</title>
 </head>
 <body>
@@ -15,12 +16,24 @@
         <div class="container">
             <div class="round-timer">
                 <div class="value-container">
-                    <p id="round-text">Round 1/12</p>
-                    <p id="round-timer-text">2:32</p>
+                    <p id="round-text">Rounds</p>
+                    <p id="intervalo-text">Interval</p>
+                    <p id="finished">Finished</p>
+                    <p id="round-timer-text">0:00</p>
                 </div>
             </div>
+                    <div class="config">
+                        <button><i class="material-icons">settings</i></button>
+                    </div>
+                    <div class="buttons">
+                        <button id="start-button">Start</button>
+                        <button id="pause-button">Pause</button>
+                        <button id="stop-button">Stop</button>
+                    </div>
         </div>
     </main>
+    <audio class="ringbell" src="ringbell.mp3"></audio>
 </body>
+
 <script src="app.js"></script>
 </html>
